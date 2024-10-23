@@ -1,23 +1,20 @@
-function calculadora(a, b, operacao) {
-}if (operacao === "soma") {
-        return a + b;
-          
-}else if (operacao === "subtracao") {
-        return a - b;
-    
-}else if (operacao === "multiplicacao")
-        return a * b;
-       
-     else if (operacao === "divisao") {
-    }if (b === 0) {
-        return "Erro: Divisão por zero";
-    }
-    return a / b; 
+document.getElementById('EmailForm').addEventListener("submit", 
+    function(event) {
+        event.preventDefault();
 
-    
-    return ("Divisão por zero não é permitida");         
-    console.log(calculadora(10, 5, "subtracao"));     
-    console.log(calculadora(10, 5, "multiplicacao"));  
-    console.log(calculadora(10, 5, "divisao"));        
-    console.log(calculadora(10, 0, "divisao"));        
-    console.log(calculadora(10, 5, "Operação invalida"));
+        const to = document.getElementById("to").value;
+        const subject = document.getElementById("subject").value;
+        const body = document.getElementById("body").value;
+
+        console.log(to);
+        console.log(subject);
+        console.log(body);
+
+        const mailtolink = `mailto:${to}?subjuect=
+        ${encodeURIComponent(subject)}
+        &body=${encodeURIComponent(body)}
+        `;
+
+        window.location.href = mailtolink
+    }
+);
