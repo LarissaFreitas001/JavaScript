@@ -18,7 +18,10 @@ function appenCharacters(characters) {
                     <li><img src="${character.image}" alt="${character.name}"></li>
                     <li>Nome: ${character.name}</li>
                     <li>Status: ${character.status}</li>
-                    <li>Espécie: ${character.species}</li>
+                    <li>Espécie: ${character.species}</liz
+                    <li>Tipo: ${character.type}</li>
+                    <li>Origem: ${character.origin.name}</li>
+                     <li>Localização: ${character.location.name}</li>
                 </ul>`;
     }
     place.innerHTML = out;    
